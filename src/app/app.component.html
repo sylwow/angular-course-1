@@ -5,10 +5,13 @@
   />
 </div>
 
+<div class="">
+  <button (click)="edit()">edit</button>
+</div>
 <div>
   <div class="courses">
     <course-card
-      *ngFor="let course of courses$ | async"
+      *ngFor="let course of courses"
       [course]="course"
       (courseChanged)="save($event)"
     >
